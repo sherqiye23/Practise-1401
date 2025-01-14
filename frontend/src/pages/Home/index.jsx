@@ -20,8 +20,6 @@ export default function Home() {
     const handleBasket = (e, item) => {
         e.stopPropagation()
         let findBasket = basket.find((element) => element._id == item._id)
-        console.log(findBasket);
-
         if (findBasket) {
             findBasket.count++
             setBasket([...basket])
